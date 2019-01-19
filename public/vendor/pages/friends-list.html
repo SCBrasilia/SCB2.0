@@ -1,0 +1,17 @@
+ <!-- painel de amizades -->
+ <div id="panel-friends">
+    <div class="input-group w-100">
+        <input type="text" class="form-control" id="friendSerachIpt" ng-model="friendSearch" placeholder="Digite um nome"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <ul id="friend-list">
+        <li ng-repeat="friend in vm.friends | filter:friendSearch as result track by friend.id" ng-click="vm.register_popup(friend.nome, friend.id)">
+            <div>
+                {{friend.nome}} {{friend.status}}
+            </div>
+        </li>
+    </ul>
+</div>

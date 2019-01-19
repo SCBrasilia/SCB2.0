@@ -1,0 +1,37 @@
+<div ng-controller="mainController as vm" class="body-main" ng-init="vm.init()">
+    <div class="container-box">
+        <main class="main">
+            <section class="menu">
+                <ul>
+                    <li>
+                        link numero 1
+                    </li>
+                    <li>
+                        link numero 2
+                    </li>
+                    <li>
+                        linnk numero 3
+                        <ul>
+                            <li>sub link 1</li>
+                            <li>sub link 2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        link numero 4
+                    </li>
+                </ul>
+            </section>
+            <div id="fiend-icon-left" ng-click="vm.open_friend_list()"><i class="fas fa-user-friends"></i></div>
+            <section class="feed">
+                
+            </section>
+            <section class="event">
+                <!-- Sugestao de amizade e propagandas -->
+            </section>
+        </main>
+        <aside class="aside">   
+            <friend-list friends="vm.friends" registerpopup="vm.register_popup"></friend-list>
+        </aside>
+    </div>
+    <div id="chats"></div>
+</div>

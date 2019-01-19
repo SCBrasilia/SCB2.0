@@ -1,0 +1,17 @@
+{
+  "name": "scb",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Marcos henrique"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

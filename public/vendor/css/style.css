@@ -1,0 +1,153 @@
+html,
+body {
+    background: #e9ebee;
+    height: 100%;
+}
+i{
+    cursor: pointer !important;
+}
+.container-box {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-template-areas:
+        'header header'
+        'main aside'
+        'footer footer'
+    ;
+}
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 150px minmax(100px, 1fr) 200px;
+    grid-template-rows: auto;
+    grid-template-areas: 'menu feed event';
+    grid-gap: 10px;
+    padding: 10px;
+}
+#upl-image-post{
+    display: none;
+}
+#message-post{
+    padding-bottom: 10px;
+    resize: none;
+}
+#list-friend-feed{
+    z-index: 10000000;
+}
+#list-friend-feed:hover{
+    color:royalblue; 
+}
+#fiend-icon-left{
+    right: 0;
+    font-size: 20px;
+    position: absolute;
+    display: none;
+}
+.no-padding{
+    padding: 0px;
+}
+.aside {
+    grid-area: aside;
+    border-left: 2px solid #ccc;
+}
+#friendSerachIpt{
+    background-color: transparent !important;
+}
+.menu {
+    grid-area: menu;
+}
+
+.feed {
+    grid-area: feed;
+    background: #fff;
+}
+
+.event {
+    grid-area: event;
+    background: #fff;
+}
+#friend-list{
+    padding-left: 3px;
+    list-style: none;
+}
+
+#icon-back-friend-list{
+    font-size: 20px;
+    margin: 5px;
+}
+
+@media(max-width: 1150px){
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 150px minmax(530px, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 'menu feed';
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    .event {
+        grid-area: none;
+        background: #fff;
+        display: none;
+    }
+}
+@media(max-width: 930px){
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: minmax(100px, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 'feed';
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    .menu {
+        grid-area: none;
+        display: none;
+    }
+}
+
+@media(max-width: 530px){
+    #fiend-icon-left{
+        display: block;
+        /* position: fixed; */
+    }
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: minmax(100px, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 'feed';
+        grid-gap: none;
+        padding: none;
+    }
+    .aside{
+        grid-area: none;
+        display: none;
+    }
+    .container-box {
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'main'
+        ;
+    }
+    .popup-box{
+        height: 200px;
+        min-height: 200px !important;
+        max-height: 200px !important;
+        width: 250px;
+    }
+    .body-menssage{
+        height: 130px;
+        min-height: 130px;
+        max-height: 130px;
+    }
+}
